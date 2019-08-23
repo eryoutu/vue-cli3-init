@@ -1,0 +1,21 @@
+// less变量
+@sizing: 1200px;
+@main-color: #386DFF;
+@body-bgcolor: #F2F2F5;
+@font-color: #333344;
+@title-color: #191919;
+@border-color: #E4E5E9;
+@page-space: 24px;
+
+// 多行文本（兼容IE，无省略号）
+.ellipsis-ie(@row: 4, @lh: 1.5em) { // 继承此样式，不要使用padding
+  line-height: @lh;
+  height: calc(@row * @lh);
+  overflow: hidden;
+}
+
+// 过渡
+.transition(@time: 0.2s) {
+  transition: all @time ease-in-out;
+}
+
