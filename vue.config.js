@@ -27,5 +27,23 @@ module.exports = {
         })
       ]
     }
+  },
+  chainWebpack: config => {
+    // 修改默认对svg的处理，排除icon目录
+    config.module
+      .rule("svg")
+      .exclude.add(path.join(__dirname, "src/assets/icons"))
+      .end();
+    config.module
+      .rule("icons")
+      .test(/\.svg$/)
+      .include.add(path.join(__dirname, "src/assets/icons"))
+      .end()
+      .use("svg-sprite-loader")
+      .loader("svg-sprite-loader")
+      .options({
+        symbolId: "icon-[name]"
+      })
+      .end();
   }
 };

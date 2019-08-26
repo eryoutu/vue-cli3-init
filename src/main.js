@@ -5,6 +5,7 @@ import store from "./store";
 import "./assets/less/app.less";
 import util from "./assets/js/util";
 import api from "./assets/js/api";
+import "./assets/icons";
 
 Vue.config.productionTip = process.NODE_ENV === "production";
 

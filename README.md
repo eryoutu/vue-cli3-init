@@ -10,6 +10,7 @@ vue-cli3项目基础搭建
 6. 样式文件：变量、重置、全局通用
 7. 自定义字体
 8. 注册全局插件
+9. 使用`svg-sprite-loader`，制作`svg雪碧图`，并全局注册`icon-svg`组件，加载`svg`图
 9. 在`babel.config.js`中**按需添加**配置`polyfill`，抹平浏览器差异（一些es6、es7方法在ie上不支持）
 10. 增加`web.config`文件，解决部署到`azure`时的一下问题：
   - （1）`vue-router`的`history`模式下路径找不到；
