@@ -4,7 +4,7 @@ import Home from "./views/Home.vue";
 
 Vue.use(Router);
 
-export default new Router({
+const router = new Router({
   mode: "history",
   base: process.env.BASE_URL,
   routes: [
@@ -25,3 +25,10 @@ export default new Router({
     { path: "*", redirect: "/" }
   ]
 });
+
+// 页面跳转后回到顶端
+router.afterEach((to, from, next) => {
+  window.scrollTo(0, 0);
+});
+
+export default router;
